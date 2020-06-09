@@ -13,7 +13,7 @@ CREATE TABLE aeroport(
     state text,
     latitude float,
     longitude float,
-    surcharge int
+    surcharge float
 );
 
 CREATE TABLE vol(
@@ -21,8 +21,8 @@ CREATE TABLE vol(
     idFly varchar(10),
     distancekm int,
     dayOfWeek int,
-    departureTime timestamp,
-    arrivalTime timestamp,
+    departureTime varchar(5),
+    arrivalTime varchar(5),
     flightSize int,
     reservedPlaces int,
     departureAirportCode varchar(3),
@@ -33,11 +33,12 @@ CREATE TABLE vol(
 
 CREATE TABLE client(
     ID int PRIMARY KEY,
-    login text,
-    mdp text, --A crypter
     nom text,
     prenom text,
     birth date,
     mail text,
     FOREIGN KEY(ID) REFERENCES Vol(ID)
 );
+
+insert into tarif (route, weflights, farecode, datetodeparture, fillingrate, fare) values ('YAM-YSJ',0,'Q',21,40,140);
+delete from tarif where route = 'YAM-YSJ'
