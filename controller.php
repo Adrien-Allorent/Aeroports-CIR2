@@ -27,3 +27,4 @@ if (isset($_GET['func'])) {
         header ('Location: recherche.php');
     }
 }
+
