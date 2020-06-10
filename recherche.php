@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +5,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        idjs = 0;
+        function add() {
+            idjs++;
+            var input = addInput.innerHTML
+            addInput.innerHTML = input + '<div class="row"><div class = "col-md-3"><input type=\'text\' class=\'form-control\' id=idjs+"nom"  placeholder="Entrez votre nom"></div><div class = "col-md-3"><input type=\'text\' class=\'form-control\' id=idjs+"prenom"  placeholder="Entrez votre prénom"></div><div class = "col-md-3"><input type=\'date\' class=\'form-control\' id=idjs+"date"  placeholder="Date de naissance"></div><div class = "col-md-3"> <input type=\'mail\' class=\'form-control\' id=idjs+"mail"  placeholder="Entrez votre adresse email"><br/></div></div>';
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
@@ -39,12 +46,18 @@
             </div>
             <br>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="material-icons">person_add</div>
                     <label for="">Nombre de passagers</label>
-                    <input type="number" class="form-control" id="nbrePassager" name="nbrePassager" placeholder="Entrez le nombre de passagers">
+                </div>
+                <div class="col-md-3">
+                    <input type="button" class="btn btn-outline-dark btn-lg" value="+" onClick="add();" />
                 </div>
             </div>
+                <div id="addInput">
+                    <br>
+
+                </div>
         </div>
         <button type="submit" class="btn btn-outline-dark btn-lg" id="recherche" name="recherche">Rechercher des vols</button>
 
