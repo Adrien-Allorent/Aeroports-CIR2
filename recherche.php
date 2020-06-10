@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
         idjs = 0;
+        <?php
+        session_start();
+        $_SESSION['nbrePassagers']=0;
+        ?>
         function add() {
+            <?php
+                $_SESSION['nbrePassagers'] += 1;
+            ?>
             idjs++;
             var input = addInput.innerHTML
-            addInput.innerHTML = input + '<div class="row"><div class = "col-md-3"><input type=\'text\' class=\'form-control\' id=idjs+"nom"  placeholder="Entrez votre nom"></div><div class = "col-md-3"><input type=\'text\' class=\'form-control\' id=idjs+"prenom"  placeholder="Entrez votre prénom"></div><div class = "col-md-3"><input type=\'date\' class=\'form-control\' id=idjs+"date"  placeholder="Date de naissance"></div><div class = "col-md-3"> <input type=\'mail\' class=\'form-control\' id=idjs+"mail"  placeholder="Entrez votre adresse email"><br/></div></div>';
+            addInput.innerHTML = input + "<div class='row'><div class = 'col-md-3'><input type=\'text\' class=\'form-control\' id='nom'"+idjs+" placeholder='Entrez votre nom'></div><div class = 'col-md-3'><input type=\'text\' class=\'form-control\' id='prenom'"+idjs+" placeholder='Entrez votre prénom'></div><div class = 'col-md-3'><input type=\'date\' class=\'form-control\' id='dateNaissance'"+idjs+" placeholder='Date de naissance'></div><div class = 'col-md-3'> <input type=\'mail\' class=\'form-control\' id='mail'"+idjs+"  placeholder='Entrez votre adresse email'><br/></div></div>";
         }
     </script>
 </head>
@@ -60,6 +67,7 @@
                 </div>
         </div>
         <button type="submit" class="btn btn-outline-dark btn-lg" id="recherche" name="recherche">Rechercher des vols</button>
+
 
 </div>
 </form>
