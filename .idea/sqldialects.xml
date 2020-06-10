@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/airport.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/airport2.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/controller.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/query.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/fare.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/flight.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/travel.sql" dialect="PostgreSQL" />
   </component>
 </project>
